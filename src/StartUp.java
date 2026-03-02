@@ -1,9 +1,8 @@
-import com.torhov.project.taskmanagementsystem.models.tasks.TaskBase;
+import com.torhov.project.taskmanagementsystem.core.TaskManagementEngineImpl;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class StartUp {
     public static void main(String[] args) {
-
+        TaskManagementEngineImpl engine = new TaskManagementEngineImpl();
+        engine.start();
     }
 }
