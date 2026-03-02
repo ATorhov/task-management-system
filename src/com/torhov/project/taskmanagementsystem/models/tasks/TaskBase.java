@@ -2,9 +2,10 @@ package com.torhov.project.taskmanagementsystem.models.tasks;
 
 import com.torhov.project.taskmanagementsystem.models.tasks.contracts.Assignable;
 import com.torhov.project.taskmanagementsystem.models.tasks.contracts.Unassignable;
+import com.torhov.project.taskmanagementsystem.models.tasks.contracts.models.Task;
 import com.torhov.project.taskmanagementsystem.utils.ValidationHelpers;
 
-public abstract class TaskBase implements Assignable, Unassignable {
+public abstract class TaskBase implements Task {
 
     public static final int TASK_TITLE_MIN_LENGTH = 10,
                             TASK_TITLE_MAX_LENGTH = 500,
@@ -30,17 +31,11 @@ public abstract class TaskBase implements Assignable, Unassignable {
         this.description = description;
     }
 
-    public int getId() {
-        return id;
-    }
 
     private void setId(int id) {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
-    }
 
     protected void validateTitle(String title){
         ValidationHelpers.validateStringLength(title,
@@ -54,10 +49,6 @@ public abstract class TaskBase implements Assignable, Unassignable {
     private void setTitle(String title) {
         validateTitle(title);
         this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
     }
 
     protected void validateDescription(String description){
