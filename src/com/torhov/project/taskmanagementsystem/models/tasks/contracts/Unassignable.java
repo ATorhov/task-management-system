@@ -4,6 +4,6 @@ import com.torhov.project.taskmanagementsystem.models.tasks.TaskBase;
 
 public interface Unassignable {
 
-    void unassign(int assigneeId);
+    void removeAssignee(int assigneeId);
 
 }

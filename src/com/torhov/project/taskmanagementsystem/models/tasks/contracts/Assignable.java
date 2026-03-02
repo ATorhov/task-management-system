@@ -4,7 +4,5 @@ public interface Assignable {
 
     String getAssignee();
     void addAssignee(int assigneeId);
-    boolean getIsAssigned();
-    void setAssigned(boolean isAssigned);
 
 }

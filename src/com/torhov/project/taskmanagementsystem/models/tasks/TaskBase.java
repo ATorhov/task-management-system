@@ -31,11 +31,18 @@ public abstract class TaskBase implements Task {
         this.description = description;
     }
 
+    public int getId(){
+        return id;
+    }
 
     private void setId(int id) {
         this.id = id;
     }
 
+    @Override
+    public String getTitle(){
+        return title;
+    }
 
     protected void validateTitle(String title){
         ValidationHelpers.validateStringLength(title,
@@ -49,6 +56,11 @@ public abstract class TaskBase implements Task {
     private void setTitle(String title) {
         validateTitle(title);
         this.title = title;
+    }
+
+    @Override
+    public String getDescription(){
+        return description;
     }
 
     protected void validateDescription(String description){
